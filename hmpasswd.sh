@@ -13,7 +13,7 @@ start() {
 }
 
 stop() {
-	echo "Stop hmpasswd"
+	echo "Stopping hmpasswd"
 	logger -t homematic -p user.info "stopping hmpasswd"
 	echo "OK"
 }
@@ -39,9 +39,9 @@ uninstall() {
 }
 
 info() {
-	echo "Info: Author: <a href=\"mailto:rh@hrdns.de\">Richard Huelsberg</a>"
-	echo "Info: Homepage: <a target=\"_blank\" href=\"https://www.hrdns.de\">HRdns.de</a>"
-	echo "Name: HMpasswd (SSL)"
+	echo "Info: Author: <a href=\"mailto:rh@hrdns.de\">Richard Huelsberg</a><br>"
+	echo "Info: Homepage: <a target=\"_blank\" href=\"https://www.hrdns.de\">HRdns.de</a><br>"
+	echo "Name: HMpasswd"
 	echo "Version: 0.0.1"
 	echo "Operations: uninstall"
 	echo "Update: https://raw.githubusercontent.com/sgc-fireball/hmpasswd/master/VERSION"
