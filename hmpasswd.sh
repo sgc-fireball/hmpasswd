@@ -44,7 +44,7 @@ info() {
 	echo "Name: HMpasswd (SSL)"
 	echo "Version: 0.0.1"
 	echo "Operations: uninstall"
-	echo "Update: http://raw.githubusercontent.com/owagner/hm2mqtt/master/hm2mqtt-ccu2-addon/VERSION"
+	echo "Update: https://raw.githubusercontent.com/sgc-fireball/hmpasswd/master/VERSION"
 }
 
 case "$1" in
