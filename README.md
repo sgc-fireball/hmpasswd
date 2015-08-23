@@ -10,13 +10,11 @@ Passwort: homematic
 
 Dependencies
 ------------
-
 * CCU2
 * SSL Webserver aktiviert
 
 Install
 -------
-
 1. Öffne .htpasswd
 2. Ändere Username und Passwort
 3. Starte ./build.sh
