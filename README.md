@@ -1,7 +1,7 @@
 HMpasswd
 =======
 
-  Geschrieben und (C) 2015 Richard Hülsberg <rh@hrdns.de>
+  (C) 2015 Richard Hülsberg <rh@hrdns.de>
 
 Dependencies
 ------------
