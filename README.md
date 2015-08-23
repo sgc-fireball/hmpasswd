@@ -1,13 +1,13 @@
 HMpasswd
 =======
 
-  Written and (C) 2015 Richard Hülsberg <rh@hrdns.de>
+  Geschrieben und (C) 2015 Richard HÃ¼lsberg <rh@hrdns.de>
 
 Dependencies
 ------------
 
 * CCU2
-** enabled SSL Webservice
+* SSL Webserver aktiviert
 
 Changelog
 ---------
