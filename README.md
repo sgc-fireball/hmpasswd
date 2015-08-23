@@ -1,7 +1,7 @@
 HMpasswd
 =======
 
-  (C) 2015 Richard Hülsberg <rh@hrdns.de>
+  (C) 2015 Richard Hülsberg <rh+homematic@hrdns.de>
 
 Defaults
 --------
