@@ -1,0 +1,42 @@
+#!/bin/sh
+
+mkdir -p /mnt-root
+mkdir -p /mnt-user
+
+mount -t ubifs ubi0:root /mnt-root
+mount -t ubifs ubi1:user /mnt-user
+
+PWD=`pwd`
+CONF="/mnt-root/etc/lighttpd/lighttpd_ssl.conf"
+HTPASSWD="/etc/lighttpd/.htpasswd"
+HTPASSWD_SETUP="/mnt-root/${HTPASSWD}"
+MODAUTH="/mnt-root/lib/mod_auth.so"
+USERNAME=`cat ${PWD}.htpasswd | cut -d ':' -f 1`
+
+if test -e "${CONF}"; then 
+	if ! test -e "${CONF}.bak"; then
+		cp "${CONF}" "${CONF}.bak"
+	
+		cp "${PWD}/hmpasswd.sh" "/mnt-user/etc/config/rc.d/"
+		cp "${PWD}/mod_auth.so" "${MODAUTH}"
+		cp "${PWD}/.htpasswd" "${HTPASSWD_SETUP}"
+
+		echo "" >> "${CONF}"
+		echo "auth.backend = \"plain\"" >> "${CONF}"
+		echo "auth.backend.plain.userfile = \"${HTPASSWD}\"" >> "${CONF}"
+		echo "" >> "${CONF}"
+		echo "auth.require = ( \"/\" =>" >> "${CONF}"
+		echo "  (" >> "${CONF}"
+		echo "    \"method\" => \"basic\"," >> "${CONF}"
+		echo "    \"realm\" => \"HMpasswd\"," >> "${CONF}"
+		echo "    \"require\" => \"user=${USERNAME}\"" >> "${CONF}"
+		echo "  )" >> "${CONF}"
+		echo ")" >> "${CONF}"
+		
+		PID=`ps afx | grep lighttpd_ssl | grep -v grep | awk '{print $1}'`
+		kill "${PID}"
+	fi
+fi
+
+umount /mnt-root
+umount /mnt-user
