@@ -15,8 +15,7 @@
 ## Install
 1. Öffne .htpasswd
 2. Ändere Username und Passwort
-3. Starte ./build.sh
-   Auf einem Linux System wie Debian/Ubuntu/Gentoo.
+3. Starte ```./build.sh```. Auf einem Linux System wie Debian/Ubuntu/Gentoo.
 4. In der CCU2 einloggen
 5. Zusatzsoftware hmpasswd.tar.gz hochladen und installieren
 6. Öffne https://homematic-ccu2/
