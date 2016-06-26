@@ -1,8 +1,8 @@
 # HMpasswd
 
 ## Defaults
-Username: homematic
-Passwort: homematic
+- Username: homematic
+- Passwort: homematic
 
 ## Dependencies
 - CCU2
@@ -28,4 +28,4 @@ Passwort: homematic
   - inital
 
 ## Author
-(C) 2015 Richard Hülsberg <rh+homematic@hrdns.de>
+(C) 2015 [Richard Hülsberg](mailto:rh+homematic@hrdns.de)
