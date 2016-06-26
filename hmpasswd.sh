@@ -42,7 +42,7 @@ info() {
 	echo "Info: Author: <a href=\"mailto:rh+homematic@hrdns.de\">Richard Huelsberg</a><br>"
 	echo "Info: Homepage: <a target=\"_blank\" href=\"https://www.hrdns.de\">HRdns.de</a><br>"
 	echo "Name: HMpasswd"
-	echo "Version: 0.0.1"
+	echo "Version: 0.0.2"
 	echo "Operations: uninstall"
 	echo "Update: https://raw.githubusercontent.com/sgc-fireball/hmpasswd/master/VERSION"
 }
